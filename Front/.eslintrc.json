@@ -26,6 +26,7 @@
                 "maxEOF": 1
             }
         ],
+        "@typescript-eslint/react/no-children-prop": "off",
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/ban-ts-comment": "warn",
         "@typescript-eslint/interface-name-prefix": "off",

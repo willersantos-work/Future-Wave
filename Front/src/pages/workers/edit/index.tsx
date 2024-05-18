@@ -48,7 +48,7 @@ const EditWorker: React.FC = () => {
     const onSubmit = async (data: ICreateWorker) => {
         try {
             await workerService.updateById(data, workerId as number);
-            notify(`Funcionário atualizado com sucesso`, "success");
+            notify("Funcionário atualizado com sucesso", "success");
             push("/workers/dashboard");
         } catch (error: any) {
             const listErrors = error?.response?.data?.errors;

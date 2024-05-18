@@ -25,7 +25,9 @@ export const SearchBar: React.FC<ISearchBarProps> = ({ onClean, onSearch }) => {
 
     return (
         <InputGroup borderRadius="1rem" display="flex" gap={0}>
-            <InputLeftElement pointerEvents="none" children={<Search2Icon color="whitesmoke" />} />
+            <InputLeftElement pointerEvents="none">
+                <Search2Icon color="whitesmoke" />
+            </InputLeftElement>
             <Input
                 border="1px solid"
                 borderColor="gray.300"

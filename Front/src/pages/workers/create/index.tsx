@@ -34,7 +34,7 @@ const CreateWorker: React.FC = () => {
     const onSubmit = async (data: ICreateWorker) => {
         try {
             await workerService.create(data);
-            notify(`Funcionário criado com sucesso`, "success");
+            notify("Funcionário criado com sucesso", "success");
             push("/workers/dashboard");
         } catch (error: any) {
             const listErrors = error?.response?.data?.errors;

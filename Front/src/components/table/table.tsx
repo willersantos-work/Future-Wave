@@ -15,7 +15,7 @@ interface ITableProps {
 }
 
 interface IColumn {
-    key: keyof any | any;
+    key: any;
     name: string;
     render?: (record: any) => React.ReactNode;
     sort: boolean;
@@ -29,6 +29,7 @@ export const Table: React.FC<ITableProps> = ({ columns, data, loading, sort, sor
                 <Tr bgColor="gray.800">
                     {columns.map((column) => (
                         <Th
+                            key={column.key}
                             w="fit-content"
                             justifyContent="justify-between"
                             alignItems="center"
@@ -56,6 +57,7 @@ export const Table: React.FC<ITableProps> = ({ columns, data, loading, sort, sor
                 <Tbody w="full">
                     {data.map((item, index) => (
                         <Tr
+                            key={index}
                             bgColor={NumberUtils.isMultiple(index, 2) ? "gray.600" : "green.600"}
                             _hover={{ bgColor: NumberUtils.isMultiple(index, 2) ? "gray.700" : "green.800" }}
                             transition="colors 0.5s"
@@ -63,6 +65,7 @@ export const Table: React.FC<ITableProps> = ({ columns, data, loading, sort, sor
                         >
                             {columns.map((column) => (
                                 <Td
+                                    key={column.key}
                                     w="fit-content"
                                     alignItems="center"
                                     align="center"

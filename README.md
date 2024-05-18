@@ -18,12 +18,14 @@ NEXT_PUBLIC_URL_BACKEND=http://localhost:5000
 3. In the same folder run in terminal following command:
 
 ```bash
+npm i --force
 npm run dev
 ```
 
 3.  Enter in folder Back and run in terminal following command:
 
 ```bash
+npm i
 npm run dev
 ```
 

@@ -9,6 +9,7 @@ This project is an administrative dashboard designed to help users manage employ
 First, run the development server in terminal:
 
 ```bash
+npm i --force
 npm run dev
 ```
 
@@ -48,6 +49,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The steps to see production version is open terminal and run:
 
 ```bash
+npm i --force
 npm run build
 npm run start
 ```
